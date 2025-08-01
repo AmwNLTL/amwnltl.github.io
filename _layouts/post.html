@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article>
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-meta">
+
+    <p>
+
+      <strong>
+        posted
+        <!--
+            by
+            {% if page.author %}
+            {{ page.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            -->
+        on
+        {{ page.date | date: '%B %d, %Y' }}
+      </strong>
+      &middot;
+      {% include read_time.html content=page.content %}
+    </p>
+    <div>
+      <p>
+        tags:
+        <span>
+          {{ page.tag | join: ", " }}
+        </span>
+      </p>
+    </div>
+    </p>
+
+  </div>
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>

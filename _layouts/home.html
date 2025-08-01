@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+<div class="content">
+
+  <div class="container-md">
+    {{ content }}
+  </div>
+
+  <!-- Home Post List -->
+  {% for post in site.posts %}
+
+  <article class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+      <h1 class="post-title">{{ post.title }}</h1>
+    </a>
+
+    <div class="post-meta">
+
+      <p>
+
+        <strong>
+          posted
+          <!--
+            by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            -->
+          on
+          {{ post.date | date: '%B %d, %Y' }}
+        </strong>
+        &middot;
+        {% include read_time.html content=post.content %}
+      </p>
+      <div>
+        <p>
+          tags:
+          <span>
+            {{ post.tag | join: ", " }}
+          </span>
+        </p>
+      </div>
+      </p>
+
+    </div>
+
+    <div class="post-preview">
+
+      {% assign teaser = post.excerpt | markdownify | strip_html | truncate: 160 %}
+      <p class="excerpt">{{ teaser }}</p>
+
+    </div>
+
+    <p class="read-more">
+      <a href="{{ post.url }}">Read more…</a>
+    </p>
+
+  </article>
+
+  {% endfor %}
+
+  <!-- Pager 
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" href="{{" /posts" | relative_url }}">View All Posts &rarr;</a>
+      </div>
+      -->
+
+</div>
