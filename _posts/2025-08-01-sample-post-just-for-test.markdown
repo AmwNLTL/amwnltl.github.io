@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "sample post just for test"
-date: 2025-08-02
+date: 2025-08-01
 categories: samples
 permalink: "sample-post-just-for-test"
 tag: 
