@@ -9,9 +9,15 @@ baseurl: ""
 url: "https://amwnltl.github.io"
 twitter_username: AmwNLTL
 twitter:
+  title: AmwNLTL Blog
   username: AmwNLTL
-  card: summary
+  image: /assets/images/default-social-card.png
 github_username:  AmwNLTL
+og:
+  site_name: AmwNLTL Blog
+  article:
+    author: AmwNLTL
+  image: /assets/images/default-social-card.png
 social:
   name: AmwNLTL
   links:
