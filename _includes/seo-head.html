@@ -1,0 +1,14 @@
+{%- seo -%}
+<link rel="alternate" type="application/atomxml" title="{{ site.title | escape }}"
+    href="{{ '/feed.xml' | absolute_url }}">
+
+{%- assign robots_directive = nil -%}
+{%- if page.noindex == true -%}
+{%- assign robots_directive = 'noindex,follow' -%}
+{%- endif -%}
+{%- if page.robots -%}
+{%- assign robots_directive = page.robots -%}
+{%- endif -%}
+{%- if robots_directive -%}
+<meta name="robots" content="{{ robots_directive }}">
+{%- endif -%}
