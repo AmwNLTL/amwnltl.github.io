@@ -22,6 +22,12 @@ permalink: /:title
 author:
   name: "AmwNLTL"
 
+defaults:
+  - scope: { path: "" }
+    values:
+      image: /assets/images/default-social-card.png
+      description: "Just some texts about me doing some reverse engineering, Windows Kernel stuff and other freak related topics I want to cover to help a stranger."
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
